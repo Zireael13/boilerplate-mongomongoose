@@ -27,7 +27,7 @@ var Schema = mongoose.Schema
 // building block for Models. They can be nested to create complex models,
 // but in this case we'll keep things simple. A model allows you to create
 // instances of your objects, called **documents**.
-
+// comment
 // Create a person having this prototype :
 
 // - Person Prototype -
