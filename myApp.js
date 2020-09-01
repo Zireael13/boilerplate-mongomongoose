@@ -42,12 +42,12 @@ var Schema = mongoose.Schema
 
 // <Your code here >
 
-var personSchema = new Schema({
+const personSchema = new Schema({
   name: {type: String, required: true},
   age: Number,
-  favoriteFoods: [String],
+  favoriteFoods: [String]
 });
-var Person = mongoose.model('Person', personSchema);
+const Person = mongoose.model('Person', personSchema);
 
 // **Note**: Glitch is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
