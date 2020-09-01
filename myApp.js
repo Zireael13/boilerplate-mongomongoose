@@ -48,7 +48,6 @@ const personSchema = new Schema({
   favoriteFoods: [String]
 });
 const Person = mongoose.model('Person', personSchema);
-
 // **Note**: Glitch is a real server, and in real servers interactions with
 // the db are placed in handler functions, to be called when some event happens
 // (e.g. someone hits an endpoint on your API). We'll follow the same approach
@@ -83,6 +82,12 @@ const Person = mongoose.model('Person', personSchema);
 // person.save(function(err, data) {
 //    ...do your stuff here...
 // });
+
+const matt = new Person({name: 'Matt', age: 21,favoriteFoods: ['Fruit','Steak']});
+matt.save((err, data) => {
+
+});
+
 
 var createAndSavePerson = function(done) {
   
