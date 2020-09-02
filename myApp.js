@@ -113,9 +113,10 @@ const createManyPeople = (done) => {
     { name: 'John', age: 42, favoriteFoods: ['Banana', 'Steak'] },
     { name: 'Hannah', age: 20, favoriteFoods: ['Shrimp', 'Ice Cream'] },
   ];
-  Person.create(arrayOfPeople);
-
-  done(null);
+  Person.create(arrayOfPeople, (err, data) => {
+    if (err) return console.error(err);
+    done(null, data);
+  });
 };
 
 /** # C[R]UD part II - READ #
