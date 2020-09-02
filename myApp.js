@@ -164,8 +164,11 @@ const findOneByFood = (food, done) => {
 // using `Model.findById() -> Person`.
 // Use the function argument 'personId' as search key.
 
-const findPersonById = function (personId, done) {
-  done(null /* , data */);
+const findPersonById = (personId, done) => {
+  Person.findById(personId, (err, person) => {
+    if (err) return console.log(err);
+    done(null, person);
+  });
 };
 
 /** # CR[U]D part III - UPDATE # 
