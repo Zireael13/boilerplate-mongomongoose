@@ -106,16 +106,16 @@ const createAndSavePerson = function (done) {
 // as the 1st argument, and saves them all in the db.
 // Create many people using `Model.create()`, using the function argument
 // 'arrayOfPeople'.
-const arrayOfPeople = [
-  { name: 'Matt', age: 21, favoriteFoods: ['Fruit', 'Steak'] },
-  { name: 'John', age: 42, favoriteFoods: ['Banana', 'Steak'] },
-  { name: 'Hannah', age: 20, favoriteFoods: ['Shrimp', 'Ice Cream'] },
-];
 
 const createManyPeople = (done) => {
+  const arrayOfPeople = [
+    { name: 'Matt', age: 21, favoriteFoods: ['Fruit', 'Steak'] },
+    { name: 'John', age: 42, favoriteFoods: ['Banana', 'Steak'] },
+    { name: 'Hannah', age: 20, favoriteFoods: ['Shrimp', 'Ice Cream'] },
+  ];
   Person.create(arrayOfPeople);
 
-  done(null /* , data */);
+  done(null);
 };
 
 /** # C[R]UD part II - READ #
