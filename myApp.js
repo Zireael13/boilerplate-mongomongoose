@@ -199,7 +199,7 @@ const findPersonById = (personId, done) => {
 const findEditThenSave = (personId, done) => {
   const foodToAdd = 'hamburger';
   Person.update(
-    personId,
+    { _id: personId },
     (person) => {
       person.favoriteFoods.push(foodToAdd);
     },
